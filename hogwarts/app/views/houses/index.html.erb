@@ -1,2 +1,5 @@
-<h1>Houses#index</h1>
-<p>Find me in app/views/houses/index.html.erb</p>
+<h1>List All the Houses!!!</h1>
+
+<% @houses.each do |house| %>
+  <div class="link"><%= link_to house.name, house %></div>
+<% end %>

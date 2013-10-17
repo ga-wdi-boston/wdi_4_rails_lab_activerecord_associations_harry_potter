@@ -1,10 +1,8 @@
 Hogwarts::Application.routes.draw do
-  get "students/index"
-  get "students/show"
-  get "students/new"
-  get "students/create"
-  get "students/edit"
-  get "students/update"
-  get "students/destroy"
-  resources :houses, only: [:show, :index]
+  resources :students
+
+  resources :houses, only: [:show, :index] do
+    resources :students
+  end
+  
 end

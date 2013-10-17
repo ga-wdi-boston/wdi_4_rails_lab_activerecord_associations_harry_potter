@@ -17,10 +17,8 @@ ActiveRecord::Schema.define(version: 20131017213154) do
   enable_extension "plpgsql"
 
   create_table "houses", force: true do |t|
-    t.string   "name"
-    t.string   "colors"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string "name"
+    t.string "colors"
   end
 
   create_table "lectures", force: true do |t|

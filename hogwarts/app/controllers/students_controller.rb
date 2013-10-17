@@ -29,6 +29,11 @@ class StudentsController < ApplicationController
   end
 
   def update
+    if @student.update(student_params)
+      redirect_to @student
+    else
+      render action: 'edit'
+    end
   end
 
   def destroy

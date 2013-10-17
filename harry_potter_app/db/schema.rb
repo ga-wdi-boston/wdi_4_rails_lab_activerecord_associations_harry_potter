@@ -31,9 +31,14 @@ ActiveRecord::Schema.define(version: 20131017201911) do
 
   create_table "professor_skills", force: true do |t|
     t.integer  "level"
+    t.integer  "professor_id"
+    t.integer  "spell_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "professor_skills", ["professor_id"], name: "index_professor_skills_on_professor_id", using: :btree
+  add_index "professor_skills", ["spell_id"], name: "index_professor_skills_on_spell_id", using: :btree
 
   create_table "professors", force: true do |t|
     t.string   "first_name"
@@ -45,9 +50,12 @@ ActiveRecord::Schema.define(version: 20131017201911) do
 
   create_table "sections", force: true do |t|
     t.string   "time"
+    t.integer  "lecture_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "sections", ["lecture_id"], name: "index_sections_on_lecture_id", using: :btree
 
   create_table "spells", force: true do |t|
     t.string   "name"
@@ -57,9 +65,14 @@ ActiveRecord::Schema.define(version: 20131017201911) do
 
   create_table "student_skills", force: true do |t|
     t.integer  "level"
+    t.integer  "student_id"
+    t.integer  "spell_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "student_skills", ["spell_id"], name: "index_student_skills_on_spell_id", using: :btree
+  add_index "student_skills", ["student_id"], name: "index_student_skills_on_student_id", using: :btree
 
   create_table "students", force: true do |t|
     t.string   "first_name"
@@ -67,8 +80,13 @@ ActiveRecord::Schema.define(version: 20131017201911) do
     t.integer  "grade"
     t.string   "gender"
     t.string   "image"
+    t.integer  "house_id"
+    t.integer  "section_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "students", ["house_id"], name: "index_students_on_house_id", using: :btree
+  add_index "students", ["section_id"], name: "index_students_on_section_id", using: :btree
 
 end

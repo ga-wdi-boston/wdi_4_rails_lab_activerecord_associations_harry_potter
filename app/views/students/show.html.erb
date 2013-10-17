@@ -1,0 +1,7 @@
+<%= @student.name %><br />
+<%= @student.house %><br />
+
+<% @student.lectures.each do |lecture| %>
+	<%= lecture.name %><br />
+	<%= lecture.dayofweek %><br />
+<% end %>

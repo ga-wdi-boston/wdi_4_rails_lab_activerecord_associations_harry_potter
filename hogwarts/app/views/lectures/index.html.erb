@@ -1,0 +1,5 @@
+<h1>Show all the Lectures!!</h1>
+
+<% @lectures.each do |lecture| %>
+  <div class="link"><%= link_to lecture.name, lecture %></div>
+<% end %>

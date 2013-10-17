@@ -1,4 +1,10 @@
 HogwartsApp::Application.routes.draw do
+  resources :sections
+
+  resources :lectures do
+    resources :sections
+  end
+
   resources :professors
 
   resources :students

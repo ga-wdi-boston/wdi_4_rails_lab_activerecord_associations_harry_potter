@@ -1,13 +1,12 @@
 class StudentsController < ApplicationController
-  before_action :set_student, only: [:edit, :show, :update, :destroy]
+  before_action :set_student, only: [:show, :edit, :update, :destroy]
+
   def index
-    #this is very important for nesting 
     if params[:house_id]
       @students = Student.where(house_id: params[:house_id])
     else
       @students = Student.all
     end
-
   end
 
   def show
@@ -17,23 +16,21 @@ class StudentsController < ApplicationController
     @student = Student.new
   end
 
-  def edit 
-
+  def create
+    @student = Student.new(student_params)
+    if @student.save
+      redirect_to @student
+    else
+      render action: 'new'
+    end
   end
 
-
-  def create
-    @student = Student.new(students_params)
-      if @student.save
-        redirect_to @student
-      else
-        render action: 'new'
-      end
+  def edit
   end
 
   def update
-    if @student.update(students_params)
-        redirect_to @student
+    if @student.update(student_params)
+      redirect_to @student
     else
       render action: 'edit'
     end
@@ -50,11 +47,9 @@ class StudentsController < ApplicationController
     @student = Student.find(params[:id])
   end
 
-  def students_params
+  def student_params
     params.require(:student).permit(:name, :house_id)
   end
 
 end
-
-
 

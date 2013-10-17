@@ -1,4 +1,6 @@
 class Professor < ActiveRecord::Base
-	has_many :spells
-	has_many :students, through :sections	
+	has_many :lectures
+
+	has_many :skills
+	has_many :spells, through: :skills
 end

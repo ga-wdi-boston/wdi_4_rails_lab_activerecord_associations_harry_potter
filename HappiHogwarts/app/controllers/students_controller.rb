@@ -11,6 +11,11 @@ end
 
 def create
   @student = Student.new(student_params)
+  if @student.save
+    redirect_to @student
+  else
+    render action: 'new'
+  end
 end
 
 def new

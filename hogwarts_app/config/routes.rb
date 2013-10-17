@@ -1,4 +1,6 @@
 HogwartsApp::Application.routes.draw do
+  resources :professors
+
   resources :students
 
   resources :houses do

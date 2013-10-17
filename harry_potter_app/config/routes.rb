@@ -1,4 +1,12 @@
 HarryPotterApp::Application.routes.draw do
+
+  resources :students
+  resources :professors
+  resources :houses
+  resources :professor_skills
+  resources :student_skills
+  resources :lectures
+  resources :sections
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

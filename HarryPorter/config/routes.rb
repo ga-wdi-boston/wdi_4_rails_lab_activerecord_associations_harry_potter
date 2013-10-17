@@ -1,4 +1,6 @@
 HarryPorter::Application.routes.draw do
+  get "houses/index"
+  get "houses/show"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

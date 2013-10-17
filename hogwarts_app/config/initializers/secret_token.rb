@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-HogwartsApp::Application.config.secret_key_base = '2862e643d659c88093b43bf0858f58f7a8fb3c6253dcca4ec0582b7d74bb1630f30db8e6958737369a6950fb05fe58ab914a1c8ed77395821a5c9b7a5715dc77'
+HogwartsApp::Application.config.secret_key_base = 'e7b903dedc1970c47ceef56ad7a62eb067e19fb02b2bc0e03931da22de8c06b85fe38c987aa3c58f0932030bca5435f8b9409b9227d1352022408cf10a26b5f2'

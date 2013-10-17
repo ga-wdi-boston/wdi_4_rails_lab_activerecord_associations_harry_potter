@@ -5,6 +5,8 @@ Hogwarts::Application.routes.draw do
 
   resources :sections
 
+  resources :spells
+
   resources :lectures do
   	resources :sections
   end

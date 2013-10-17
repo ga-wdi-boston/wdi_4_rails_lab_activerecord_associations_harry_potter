@@ -1,5 +1,15 @@
 <h1><%= @student.name %></h1>
-<div class="link">lives in <%= @student.house %></div>
+<div class="link">lives in <%= @student.house.name %></div>
 
 <p>list of classes</p>
 <p>list of spells</p>
+
+<div class="navigation-links">
+
+<%= link_to "Edit", edit_student_path(@student) %>
+
+<%= link_to "Delete", @student, method: :delete, data: {confirm: "Are you sure?" } %>
+
+<%= link_to "Back", students_path %>
+
+</div>

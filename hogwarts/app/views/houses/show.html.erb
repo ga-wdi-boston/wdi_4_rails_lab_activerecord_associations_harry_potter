@@ -7,3 +7,5 @@
 <% @house.students.each do |student| %>
   <div class="link"><%= link_to student.name, student %></div>
 <% end %>
+
+<%= link_to "Back", houses_path %>

@@ -1,0 +1,11 @@
+<h1>Hogwarts Professors</h1>
+
+<div class="professors">
+	<%@professors.each do |professor| %>
+	<ul>
+	<div class='professor'>
+		<li><%= link_to professor.name, professor %></li>
+      		</ul>
+		<%end%>
+	</div>
+</div>

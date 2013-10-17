@@ -1,0 +1,2 @@
+module LecturesControllerHelper
+end

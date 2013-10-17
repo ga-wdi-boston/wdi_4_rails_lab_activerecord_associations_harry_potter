@@ -5,6 +5,7 @@ class CreateLectures < ActiveRecord::Migration
       t.belongs_to :Student, index: true
       t.string :title
       t.text :description
+      t.timestamps
     end
   end
 end

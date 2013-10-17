@@ -14,10 +14,9 @@
 # House.create(name: "Griffindor", colors: "red, gold", slogan: "Their daring, nerve and chivalry set Gryffindors apart")
 
 Student.create(name: "Harry Potter", house_id: 4)
-
 Student.create(name: "Luna Lovegood", house_id: 1)
-
 Student.create(name: "Robert Pattenson", house_id: 2)
 
-
-
+Lecture.create(title: "Potions")
+Lecture.create(title: "Defense of the Dark Arts")
+Lecture.create(title: "Lecture on Transformations")

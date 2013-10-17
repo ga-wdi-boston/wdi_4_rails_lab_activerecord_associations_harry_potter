@@ -1,0 +1,18 @@
+<h1>Hogwarts Lecture</h1>
+<div class="lecture">
+	<h2><%= @lecture.name %></h2>
+	<div class='professors_lectures'>
+		<%= link_to @lecture.professors.name, @lecture.professors %>
+	</div>
+
+<div class="student-roster">
+	<ol>Student Roster:
+		<% @lecture.students.each do |student| %>
+		<li><%= link_to student.name, student_url %></li>
+	</ol>
+		<% end %>
+</div>
+
+
+	<%= link_to "back to lectures", lectures_url %>
+</div>

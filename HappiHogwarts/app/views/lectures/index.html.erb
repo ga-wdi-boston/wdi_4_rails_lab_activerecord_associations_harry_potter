@@ -1,0 +1,15 @@
+<h1>Hogwarts Lectures</h1>
+<h3><%= link_to "See Professors", professors_url %></h3>
+<h3><%= link_to "See Students", students_url %></h3>
+<h3><%= link_to "Add new lecture", new_lecture_url %> </h3>
+<div class="lectures">
+	<%@lectures.each do |lecture| %>
+	<ul>
+	<div class='house_lectures'>
+		<li><%= link_to lecture.name, lecture %>
+        <li><%= link_to 'Edit', edit_lecture_path(lecture) %></li>
+        <li><%= link_to 'Destroy', lecture, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+		</ul>
+		<%end%>
+	</div>
+</div>

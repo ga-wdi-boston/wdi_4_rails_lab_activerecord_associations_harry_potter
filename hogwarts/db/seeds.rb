@@ -17,6 +17,15 @@
 # Student.create(name: "Luna Lovegood", house_id: 1)
 # Student.create(name: "Robert Pattinson", house_id: 2)
 
-Lecture.create(name: "Potions")
-Lecture.create(name: "Defense Against the Dark Arts")
-Lecture.create(name: "Transformations")
+# Lecture.create(name: "Potions")
+# Lecture.create(name: "Defense Against the Dark Arts")
+# Lecture.create(name: "Transformations")
+
+Teacher.create(name: "Professor Quarrell")
+Teacher.create(name: "Severus Snape")
+Teacher.create(name: "Albus Dumbledore")
+
+Spell.create(name: "Luminario")
+Spell.create(name: "Gargantuize")
+Spell.create(name: "Rspeciramarious")
+Spell.create(name: "Avada Kdavra")

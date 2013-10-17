@@ -1,7 +1,7 @@
-class LecturesController < ApplicationController
 
   class LecturesController < ApplicationController
-  before_action :set_student, only: [:edit, :show, :update, :destroy]
+  before_action :set_lecture, only: [:edit, :show, :update, :destroy]
+  
   def index
       @lectures = Lecture.all
   end
@@ -49,10 +49,6 @@ class LecturesController < ApplicationController
   def Lectures_params
     params.require(:lecture).permit(:name, :house_id)
   end
-
-end
-
-
 
 
 

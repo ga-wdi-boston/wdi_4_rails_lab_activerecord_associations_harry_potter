@@ -3,9 +3,7 @@ class LecturesController < ApplicationController
   before_action :set_lecture, only: [:show, :edit, :update, :destroy]
 
   def index
-    if params[:house_id]
       @lectures = Lecture.all 
-    end 
   end
 
   def show
@@ -50,5 +48,5 @@ class LecturesController < ApplicationController
   def lecture_params
     params.require(:lecture).permit(:name, :description)
   end 
-  
+
 end

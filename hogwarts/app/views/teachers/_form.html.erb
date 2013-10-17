@@ -18,11 +18,6 @@
   <%= f.text_field :name %>
 </div>
 
-<div class="field">  
-  <%= f.label :lecture %> <br>
-  <%= collection_select(:teacher, :lecture_id, Lecture.all, :id, :name) %>
-</div>
-
 <div class="actions">
   <%= f.submit %>
 </div>

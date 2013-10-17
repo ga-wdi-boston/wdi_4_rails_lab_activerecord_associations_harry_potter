@@ -1,8 +1,8 @@
 <h1>Hogwarts Lecture</h1>
 <div class="lecture">
-	<h2><%= @lecture.name %></h2>
+	<h2><%= @lecture.topic %></h2>
 	<div class='professors_lectures'>
-		<%= link_to @lecture.professors.name, @lecture.professors %>
+		<%= link_to @lecture.professor.name, @lecture.professor %>
 	</div>
 
 <div class="student-roster">

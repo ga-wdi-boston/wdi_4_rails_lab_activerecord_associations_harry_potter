@@ -11,8 +11,12 @@
 # House.create(name: "Slytherin", colors: "green, silver", slogan: "Slytherin will help you on your way to greatness")
 # House.create(name: "Griffindor", colors: "red, gold", slogan: "Their daring, nerve and chivalry set Gryffindors apart")
 
-Student.create(name: "Harry Potter", house_id: 4)
-Student.create(name: "Draco Malfoy", house_id: 3)
-Student.create(name: "Hermione Granger", house_id: 4)
-Student.create(name: "Luna Lovegood", house_id: 1)
-Student.create(name: "Robert Pattinson", house_id: 2)
+# Student.create(name: "Harry Potter", house_id: 4)
+# Student.create(name: "Draco Malfoy", house_id: 3)
+# Student.create(name: "Hermione Granger", house_id: 4)
+# Student.create(name: "Luna Lovegood", house_id: 1)
+# Student.create(name: "Robert Pattinson", house_id: 2)
+
+Lecture.create(name: "Potions")
+Lecture.create(name: "Defense Against the Dark Arts")
+Lecture.create(name: "Transformations")

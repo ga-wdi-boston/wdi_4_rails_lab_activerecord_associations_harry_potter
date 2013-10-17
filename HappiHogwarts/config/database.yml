@@ -15,12 +15,11 @@
 # gem 'pg'
 #
 development:
+  host: localhost
   adapter: postgresql
   encoding: unicode
   database: HappiHogwarts_development
   pool: 5
-  username: HappiHogwarts
-  password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -44,17 +43,10 @@ development:
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
+  host: localhost
   adapter: postgresql
   encoding: unicode
   database: HappiHogwarts_test
   pool: 5
-  username: HappiHogwarts
-  password:
 
-production:
-  adapter: postgresql
-  encoding: unicode
-  database: HappiHogwarts_production
-  pool: 5
-  username: HappiHogwarts
-  password:
+

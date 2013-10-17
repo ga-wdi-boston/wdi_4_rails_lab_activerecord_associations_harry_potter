@@ -6,6 +6,7 @@ class CreateStudents < ActiveRecord::Migration
       t.integer :grade
       t.string :gender
       t.string :image
+      t.timestamps
     end
   end
 end

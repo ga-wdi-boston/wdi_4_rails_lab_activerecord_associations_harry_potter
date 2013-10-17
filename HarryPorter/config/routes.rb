@@ -1,4 +1,11 @@
 HarryPorter::Application.routes.draw do
+  get "students/index"
+  get "students/show"
+  get "students/new"
+  get "students/create"
+  get "students/edit"
+  get "students/update"
+  get "students/destroy"
   get "houses/index"
   get "houses/show"
   # The priority is based upon order of creation: first created -> highest priority.

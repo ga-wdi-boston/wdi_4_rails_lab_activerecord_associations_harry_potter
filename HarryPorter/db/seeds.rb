@@ -19,6 +19,6 @@
 # Student.create(name: "Luna Lovegood", house_id: 1) 
 # Student.create(name: "Robert Pattinson", house_id: 2)
 
-Lecture.create(title: "Potions")
-Lecture.create(title: "Defense of the Dark Arts")
-Lecture.create(title: "Lecture on Transformations")
+Lecture.create(name: "Potions" , description: "This is a Harry Porter magical lecture!")
+Lecture.create(name: "Defense of the Dark Arts" , description: "This is a Harry Porter magical lecture!")
+Lecture.create(name: "Lecture on Transformations" , description: "This is a Harry Porter magical lecture!")

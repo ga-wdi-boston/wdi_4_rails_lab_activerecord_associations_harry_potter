@@ -1,0 +1,10 @@
+<h1>Hogwarts Students</h1>
+<div class="students">
+	<%@students.each do |student| %>
+	<ul>
+	<div class='house_students'>
+		<li><%= link_to student.name, student %></li>
+		</ul>
+		<%end%>
+	</div>
+</div>

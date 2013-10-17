@@ -3,7 +3,9 @@
 	<%@students.each do |student| %>
 	<ul>
 	<div class='house_students'>
-		<li><%= link_to student.name, student %></li>
+		<li><%= link_to student.name, student %>
+        <li><%= link_to 'Edit', edit_student_path(student) %></li>
+        <li><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></li>
 		</ul>
 		<%end%>
 	</div>

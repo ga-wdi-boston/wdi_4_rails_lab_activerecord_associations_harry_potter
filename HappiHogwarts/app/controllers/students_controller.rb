@@ -40,7 +40,7 @@ end
 private
 
 def set_student
-@student = student.find(params[:id])
+@student = Student.find(params[:id])
 end
 
 def student_params

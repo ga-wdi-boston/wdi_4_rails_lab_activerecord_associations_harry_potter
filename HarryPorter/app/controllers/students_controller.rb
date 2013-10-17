@@ -13,7 +13,7 @@ class StudentsController < ApplicationController
   end
 
   def new
-    @students = Student.new
+    @student = Student.new
   end
 
   def create
@@ -28,7 +28,7 @@ class StudentsController < ApplicationController
   def edit
   end
 
- def create
+ def update
     @student.update(student_params)
     if @student.save 
       redirect_to @student
@@ -38,7 +38,7 @@ class StudentsController < ApplicationController
   end
 
   def destroy
-    @student = Student.destroy
+    @student.destroy
     redirect_to students_url 
   end
 

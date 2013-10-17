@@ -1,2 +1,2 @@
-class Professor ActiveRecord::Base
+class Professor < ActiveRecord::Base
 end

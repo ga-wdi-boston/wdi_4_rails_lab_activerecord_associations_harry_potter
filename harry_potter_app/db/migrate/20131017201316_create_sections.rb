@@ -2,6 +2,7 @@ class CreateSections < ActiveRecord::Migration
   def change
     create_table :sections do |t|
       t.string :time
+      t.belongs_to :lecture, index:true
       t.timestamps
     end
   end

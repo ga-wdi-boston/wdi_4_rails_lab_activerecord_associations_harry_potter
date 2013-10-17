@@ -78,8 +78,76 @@ sprout.sections << potions_two
 trelawney.sections << creatures_one
 filch.sections << creatures_two
 
-# Spell.create(name: "Accio")
-# Spell.create(name: "Expecto Patronum")
-# Spell.create(name: "Erecto")
-# Spell.create(name: "Expelliarmus")
-# Spell.create(name: "Morsmordre")
+accio = Spell.create(name: "Accio")
+expecto = Spell.create(name: "Expecto Patronum")
+erecto = Spell.create(name: "Erecto")
+expelliarmus = Spell.create(name: "Expelliarmus")
+morsmordre = Spell.create(name: "Morsmordre")
+
+filch1 = filch.professor_skills.create(level: 6)
+filch2 = filch.professor_skills.create(level: 8)
+flitwick1 = flitwick.professor_skills.create(level: 10)
+lockhart1 = lockhart.professor_skills.create(level: 7)
+mcgongall1 = mcgongall.professor_skills.create(level: 8)
+pomfrey1 = pomfrey.professor_skills.create(level: 7)
+quirrell1 = quirrell.professor_skills.create(level: 6)
+slughorn1 = slughorn.professor_skills.create(level: 8)
+sprout1 = sprout.professor_skills.create(level: 9)
+trelawney1 = trelawney.professor_skills.create(level: 7)
+flitwick2 = flitwick.professor_skills.create(level: 9)
+lockhart2 = lockhart.professor_skills.create(level: 10)
+mcgongall2 = mcgongall.professor_skills.create(level: 7)
+pomfrey2 = pomfrey.professor_skills.create(level: 10)
+quirrell2 = quirrell.professor_skills.create(level: 6)
+slughorn2 = slughorn.professor_skills.create(level: 10)
+sprout2 = sprout.professor_skills.create(level: 6)
+trelawney2 = trelawney.professor_skills.create(level: 9)
+
+accio.professor_skills << filch1
+morsmordre.professor_skills << filch2
+expecto.professor_skills << flitwick1
+erecto.professor_skills << lockhart1
+expelliarmus.professor_skills << mcgongall1
+morsmordre.professor_skills << pomfrey1
+accio.professor_skills << quirrell1
+expecto.professor_skills << slughorn1
+erecto.professor_skills << sprout1
+expelliarmus.professor_skills << trelawney1
+morsmordre.professor_skills << flitwick2
+accio.professor_skills << lockhart2
+expecto.professor_skills << mcgongall2
+erecto.professor_skills << pomfrey2
+expelliarmus.professor_skills << quirrell2
+morsmordre.professor_skills << slughorn2
+expecto.professor_skills << sprout2
+accio.professor_skills << trelawney2
+
+harry1 = harry.student_skills.create(level: 3)
+hermione1 = hermione.student_skills.create(level: 1)
+goyle1 = goyle.student_skills.create(level: 1)
+cedric1 = cedric.student_skills.create(level: 2)
+susan1 = susan.student_skills.create(level: 4)
+luna1 = luna.student_skills.create(level: 3)
+cho1 = cho.student_skills.create(level: 2)
+harry2 = harry.student_skills.create(level: 5)
+hermione2 = hermione.student_skills.create(level: 4)
+goyle2 = goyle.student_skills.create(level: 3)
+cedric2 = cedric.student_skills.create(level: 5)
+susan2 = susan.student_skills.create(level: 1)
+luna2 = luna.student_skills.create(level: 3)
+cho2 = cho.student_skills.create(level: 1)
+
+morsmordre.student_skills << harry1
+expecto.student_skills << hermione1
+erecto.student_skills << goyle1
+expelliarmus.student_skills << cedric1
+morsmordre.student_skills << susan1
+accio.student_skills << luna1
+expecto.student_skills << cho1
+erecto.student_skills << harry2
+expelliarmus.student_skills << hermione2
+morsmordre.student_skills << goyle2
+accio.student_skills << cedric2
+expecto.student_skills << susan2
+erecto.student_skills << luna2
+expelliarmus.student_skills << cho2

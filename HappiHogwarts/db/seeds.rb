@@ -11,5 +11,3 @@
 # Professor.create(name: 'Slughorn')
 # Professor.create(name: 'Binns')
 # Professor.create(name: 'Dumbledore')
-
-Lecture.create(weekday: 'Monday', topic: 'Transfiguration', student: 1, professor: 1)

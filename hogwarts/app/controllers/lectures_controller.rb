@@ -3,13 +3,7 @@ class LecturesController < ApplicationController
   class LecturesController < ApplicationController
   before_action :set_student, only: [:edit, :show, :update, :destroy]
   def index
-    #this is very important for nesting 
-    if params[:house_id]
-      @lectures = Lecture.where(house_id: params[:house_id])
-    else
       @lectures = Lecture.all
-    end
-
   end
 
   def show

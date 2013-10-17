@@ -28,10 +28,18 @@ class StudentsController < ApplicationController
   def edit
   end
 
-  def update
+ def create
+    @student.update(student_params)
+    if @student.save 
+      redirect_to @student
+    else 
+      render action: 'edit'
+    end 
   end
 
   def destroy
+    @student = Student.destroy
+    redirect_to students_url 
   end
 
   private 
@@ -45,3 +53,5 @@ class StudentsController < ApplicationController
   end 
 
 end
+
+

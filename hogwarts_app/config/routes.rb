@@ -1,4 +1,6 @@
 HogwartsApp::Application.routes.draw do
+  resources :spells
+
   resources :sections
 
   resources :lectures do

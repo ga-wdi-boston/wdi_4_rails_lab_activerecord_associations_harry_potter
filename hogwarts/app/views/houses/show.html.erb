@@ -5,3 +5,5 @@
 <% @house.students.each do |student| %>
   <div class="link"><%= link_to student.name, student %></div>
 <% end %>
+
+<%= link_to "Go Back, the Dementors are near", houses_path%>

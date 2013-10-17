@@ -51,11 +51,15 @@ ActiveRecord::Schema.define(version: 20131017201911) do
   create_table "sections", force: true do |t|
     t.string   "time"
     t.integer  "lecture_id"
+    t.integer  "student_id"
+    t.integer  "professor_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   add_index "sections", ["lecture_id"], name: "index_sections_on_lecture_id", using: :btree
+  add_index "sections", ["professor_id"], name: "index_sections_on_professor_id", using: :btree
+  add_index "sections", ["student_id"], name: "index_sections_on_student_id", using: :btree
 
   create_table "spells", force: true do |t|
     t.string   "name"

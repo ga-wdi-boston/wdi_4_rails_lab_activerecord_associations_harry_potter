@@ -17,6 +17,10 @@ Student.create(name: "Harry Potter", house_id: 4)
 Student.create(name: "Luna Lovegood", house_id: 1)
 Student.create(name: "Robert Pattenson", house_id: 2)
 
-Lecture.create(title: "Potions")
-Lecture.create(title: "Defense of the Dark Arts")
-Lecture.create(title: "Lecture on Transformations")
+Lecture.create(name: "Potions")
+Lecture.create(name: "Defense of the Dark Arts")
+Lecture.create(name: "Lecture on Transformations")
+
+Teacher.create(name: "Arseface Quarrell")
+Teacher.create(name: "Defense of the Dark Arts")
+Teacher.create(name: "Lecture on Transformations")

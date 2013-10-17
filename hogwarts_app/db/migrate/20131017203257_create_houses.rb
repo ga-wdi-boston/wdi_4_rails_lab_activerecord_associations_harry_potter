@@ -3,7 +3,6 @@ class CreateHouses < ActiveRecord::Migration
     create_table :houses do |t|
       t.string :name
       t.string :colors
-      t.timestamps
     end
   end
 end

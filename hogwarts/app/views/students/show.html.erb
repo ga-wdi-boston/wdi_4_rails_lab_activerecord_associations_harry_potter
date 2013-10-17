@@ -1,5 +1,5 @@
 <h1><%= @student.name %></h1>
-<div class="link">lives in <%= @student.house.name %></div>
+<div class="link">lives in <%= link_to @student.house.name, @student.house %></div>
 
 <p>list of classes</p>
 <p>list of spells</p>

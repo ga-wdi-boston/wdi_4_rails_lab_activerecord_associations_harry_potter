@@ -1,5 +1,5 @@
 <h1>List All the Students!!!</h1>
 
 <% @students.each do |student| %>
-  <div class="link"><%= link_to student.name, student %> lives in <%= link_to student.house, student.house %></div>
+  <div class="link"><%= link_to student.name, student %> lives in <%= link_to student.house.name, student.house %></div>
 <% end %>

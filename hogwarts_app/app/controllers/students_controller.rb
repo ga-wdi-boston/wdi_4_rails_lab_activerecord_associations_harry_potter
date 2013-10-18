@@ -19,8 +19,19 @@ class StudentsController < ApplicationController
 		@student = Student.new(student_params)
 	end
 
-	def update
-	end
+	# PATCH/PUT /students/1
+  # PATCH/PUT /students/1.json
+  def update
+    respond_to do |format|
+      if @student.update(student_params)
+        format.html { redirect_to @student, notice: 'Student was successfully updated.' }
+        format.json { head :no_content }
+      else
+        format.html { render action: 'edit' }
+        format.json { render json: @student.errors, status: :unprocessable_entity }
+      end
+    end
+  end
 
 	def destroy
 		@student.destroy
@@ -33,7 +44,7 @@ class StudentsController < ApplicationController
 	end
 
 	def student_params
-		params.require(:student).permit(:name, :year, :house_i)
+		params.require(:student).permit(:name, :year, :house_id)
 	end
 
 end

@@ -14,6 +14,11 @@
     <%= f.label :professor %>
     <%=collection_select(:lecture, :professor_id, Professor.all, :id, :name, prompt: true)%>
   </div>
+
+   <div class="field">
+    <%= f.label :student %>
+    <%=collection_select(:lecture, :student_id, Student.all, :id, :name, prompt: true)%>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

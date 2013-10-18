@@ -1,14 +1,14 @@
 <h1>Show all the Lectures!!</h1>
 
 <% @lectures.each do |lecture| %>
-  <div class="link"><%= link_to lecture.name, lecture %>
-  <div><%= link_to "Edit lecture", edit_lecture_path(lecture)%>
+  <div class="link"><h2><%= link_to lecture.name, lecture %></h2>
+  <div><%= link_to "Update lecture", edit_lecture_path(lecture)%> | 
 
-<%= link_to 'Remove lecture', lecture, method: :delete, data: { confirm: "Are you sure you want to delete this lecture?"} %></div> 
+<%= link_to 'Cancel lecture', lecture, method: :delete, data: { confirm: "Are you sure you want to delete this lecture?"} %></div> 
 <% end %>
 </div>
 
-<div class="link"><%= link_to "New lecture", new_lecture_path %></div>
+<div class="link"><h2><%= link_to "New lecture", new_lecture_path %></h2></div>
 
 
-<%= link_to "Back", lectures_path %>
+<h2><%= link_to "Back", lectures_path %></h2>

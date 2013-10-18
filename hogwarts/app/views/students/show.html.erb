@@ -1,5 +1,7 @@
 <h1><%= @student.name %></h1>
+<% if @student.house %>
 <div class="link">lives in <%= link_to @student.house.name, @student.house %></div>
+<% end %>
 
 <% if @student.lectures %>
   <h2>Lectures: </h2>

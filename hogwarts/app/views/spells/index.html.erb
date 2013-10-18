@@ -1,0 +1,6 @@
+<h1>List of Magical Incantations</h1>
+
+<% @spells.each do |spell| %>
+  <h2><%= link_to spell.name, spell %></h2>
+<% end %>
+

@@ -6,11 +6,14 @@ HarryPotterApp::Application.routes.draw do
 
   resources :students do
     resources :sections
-  end
-
-  resources :students do
     resources :student_skills
   end
+
+  resources :professors do
+    resources :professor_skills
+    resources :sections
+  end
+
   resources :professors
   resources :houses
   resources :professor_skills

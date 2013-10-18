@@ -2,11 +2,13 @@
 
 <% @skills.each do |skill| %>
   <h2>  
-    <%= link_to skill.student.name, student %> 
+    <%= link_to skill.student.name, skill.student %> 
       knows 
     <%= skill.spell.name %> 
       at skill level 
-    <%= skill.skill_level %>. <%= link_to "update", edit_student_skill_path %></h2>
+    <%= skill.skill_level %>. 
+
+ <%= link_to "update", edit_student_skill_path(student_id: skill.student.id, id: skill.id) %></h2>
 
 <% end %>
 

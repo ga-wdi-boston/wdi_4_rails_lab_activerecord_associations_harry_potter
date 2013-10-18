@@ -12,6 +12,7 @@ Hogwarts::Application.routes.draw do
     resources :spells
   end
 
+  resources :lectures
  
 
   resources :houses, only: [:show, :index] do

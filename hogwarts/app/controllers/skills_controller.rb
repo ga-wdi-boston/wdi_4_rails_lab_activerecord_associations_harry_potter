@@ -1,7 +1,8 @@
 class SkillsController < ApplicationController
   
   def index
-    @skill = Skill.where(student_id: params[:student_id])
+    @student = Student.find(params[:student_id])
+    @skills = Skill.where(student_id: params[:student_id])
   end
 
 

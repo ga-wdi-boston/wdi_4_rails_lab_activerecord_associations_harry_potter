@@ -26,7 +26,8 @@ class StudentsController < ApplicationController
   end
 
   def edit
-  end
+  end      
+
 
   def update
     if @student.update(student_params)
@@ -48,7 +49,12 @@ class StudentsController < ApplicationController
   end
 
   def student_params
-    params.require(:student).permit(:name, :house_id, :lecture_id, :skill_id)
+    params.require(:student).permit(
+      :name, 
+      :house_id, 
+      lecture_ids: [], 
+      spell_ids: [], 
+      skill_ids: [])
   end
 
 end

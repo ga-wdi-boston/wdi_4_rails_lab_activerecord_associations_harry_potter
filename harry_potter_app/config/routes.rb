@@ -1,6 +1,16 @@
 HarryPotterApp::Application.routes.draw do
+  
+  root 'professor_skills#index'
 
   resources :students
+
+  resources :students do
+    resources :sections
+  end
+
+  resources :students do
+    resources :student_skills
+  end
   resources :professors
   resources :houses
   resources :professor_skills

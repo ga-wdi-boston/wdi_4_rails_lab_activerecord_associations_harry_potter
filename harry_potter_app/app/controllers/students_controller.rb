@@ -32,6 +32,7 @@ class StudentsController < ApplicationController
     end
   end
 
+
   # PATCH/PUT /students/1
   def update
     respond_to do |format|

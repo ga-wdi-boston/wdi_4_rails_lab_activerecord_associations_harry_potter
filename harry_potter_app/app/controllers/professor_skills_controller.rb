@@ -1,6 +1,14 @@
 class ProfessorSkillsController < ApplicationController
   before_action :set_professor_skill, only: [:edit, :update, :destroy]
 
+  def index
+    @sections = Section.all
+    @professors = Professor.all
+    @students = Student.all
+    @lectures = Lecture.all
+    @houses = House.all
+  end
+
   # GET /professor_skills/new
   def new
     @professor_skill = ProfessorSkill.new

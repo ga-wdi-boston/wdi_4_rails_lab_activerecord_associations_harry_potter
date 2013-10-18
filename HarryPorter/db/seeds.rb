@@ -24,9 +24,9 @@ Lecture.create(name: "Defense of the Dark Arts" , description: "This is a Harry 
 Lecture.create(name: "Lecture on Transformations" , description: "This is a Harry Porter magical lecture!")
 
 
-# Teacher.create(name: "Professor Quarrell")
-# Teacher.create(name: "Severus Snape")
-# Teacher.create(name: "Albus Dumbledore")
+Teacher.create(name: "Professor Quarrell")
+Teacher.create(name: "Severus Snape")
+Teacher.create(name: "Albus Dumbledore")
 
 # Spell.create(name: "Luminario")
 # Spell.create(name: "Gargantuize")

@@ -3,6 +3,7 @@ class CreateSpells < ActiveRecord::Migration
     create_table :spells do |t|
       t.string :name
       t.text :description
+      t.timestamps
     end
   end
 end

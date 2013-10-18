@@ -47,7 +47,7 @@
   end
 
   def Lectures_params
-    params.require(:lecture).permit(:name, :house_id)
+    params.require(:lecture).permit(:name, :teacher_id, :student_id)
   end
 
 

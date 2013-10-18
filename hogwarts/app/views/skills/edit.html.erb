@@ -1,5 +1,5 @@
 
-<%= form_for edit_student_skill_path(skill_id: @skill.id) do |f| %>
+<%= form_for [@student, @skill], :method => "post" do |f| %>
 
 
   <% if @skill.errors.any? %>

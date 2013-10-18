@@ -11,6 +11,7 @@ class SkillsController < ApplicationController
   end
 
   def update
+    # binding.pry
     if @skill.update(skill_params)
       redirect_to students
     else
@@ -19,7 +20,7 @@ class SkillsController < ApplicationController
   end
 
   private
-  
+
   def skill_params
     params.require(:skill).permit(:student_id, :teacher_id, :spell_id, :skill_level)
   end

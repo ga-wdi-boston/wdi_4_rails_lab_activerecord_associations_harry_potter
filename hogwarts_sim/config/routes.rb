@@ -2,6 +2,10 @@ HogwartsSim::Application.routes.draw do
 
 
   resources :professors
+
+  resources :students
+
+  resources :lectures
   
   resources :houses do
     resources :students

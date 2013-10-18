@@ -1,7 +1,13 @@
 <h1><%= @student.name %>'s Report card!</h1>
 
 <% @skills.each do |skill| %>
-  <%= skill.spell.name %>
+  <h2>  
+    <%= link_to skill.student.name, student %> 
+      knows 
+    <%= skill.spell.name %> 
+      at skill level 
+    <%= skill.skill_level %>. <%= link_to "update", edit_student_skill_path %></h2>
+
 <% end %>
 
 

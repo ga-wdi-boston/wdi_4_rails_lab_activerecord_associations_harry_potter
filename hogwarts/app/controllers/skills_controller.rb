@@ -2,6 +2,7 @@ class SkillsController < ApplicationController
   
   def index
     @student = Student.find(params[:student_id])
+    @teacher = Teacher.find(params[:teacher_id])
     @skills = Skill.where(student_id: params[:student_id])
   end
 

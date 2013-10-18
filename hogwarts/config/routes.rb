@@ -5,6 +5,10 @@ Hogwarts::Application.routes.draw do
 
   resources :lectures
 
+  resources :spells
+
+  resources :skills
+
   resources :houses, only: [:show, :index] do
     resources :students
   end

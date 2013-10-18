@@ -10,6 +10,13 @@
   <% end %>
 <% end %>
 
+<% if @student.skills %>
+  <h2>Skills:</h2>
+  <% @student.skills.each do |skill| %>
+    <%= link_to skill.spell.name, edit_skill_path %>
+  <% end %>
+<% end %>
+
 
 <p>list of spells</p>
 

@@ -3,9 +3,7 @@
 	<h2><%= @student.name %></h2>
 	<div class='house_students'>
 		<%= link_to @student.house.name, @student.house %></br>
-		<% @student.lectures.each do |lecture|%>
-		<%= link_to lecture.topic, lecture%>
-		<%end%>
+		<%= link_to @student.lecture.topic, @student.lecture%>
 	</div>
 	<%= link_to "back to students", students_url %>
 </div>

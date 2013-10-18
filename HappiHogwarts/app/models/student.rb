@@ -1,5 +1,5 @@
 class Student < ActiveRecord::Base
   belongs_to :house
-  has_and_belongs_to_many :lectures
+  belongs_to :lecture
   has_many :professors, through: :lectures
 end

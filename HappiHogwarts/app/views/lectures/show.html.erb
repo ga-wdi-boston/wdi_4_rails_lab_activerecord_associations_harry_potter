@@ -11,8 +11,9 @@
 	<ol>Student Roster:
 		<% @lecture.students.each do |student| %>
 		<li><%= link_to student.name, student %></li>
+				<% end %>
 	</ol>
-		<% end %>
+
 		<%else%>
 		<%= "No students" %>
 		<%end%>

@@ -1,6 +1,5 @@
-<% binding.pry %>
 
-<%= form_for(@skill) do |f| %>
+<%= form_for edit_student_skill_path(skill_id: @skill.id) do |f| %>
 
 
   <% if @skill.errors.any? %>
@@ -18,11 +17,15 @@
 
 <h2><%= @skill.student.name %>'s <%= @skill.spell.name %> skill level:</h2>
 
+<div class="field">
 <%= f.label :skill_level %>
-<%= f.select :@skill.skill_level, (1..10)%>
+<%= f.select @skill.skill_level, (1..10)%>
+</div>
+
+<br>
 
 <div class="actions">
-  <%= f.submit %>
+  <%= f.submit "Save" %>
 </div>
 
 <% end %>

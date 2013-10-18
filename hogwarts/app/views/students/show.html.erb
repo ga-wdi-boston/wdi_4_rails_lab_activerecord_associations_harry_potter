@@ -12,20 +12,24 @@
 
 
 
-  <%= form_for[@student, @student.skills.build]) do |f| %>
+  <%= form_for([@student, @student.skills.build]) do |f| %>
   
-  <%= f.label :spell %>
-  <%= collection_select(:student, :spell_id, Spell.all, :id, :name) %>
+  <%= f.label :skill %>
+  <%= collection_select(:student, :skill_id, Skill.all, :id, :name) %>
 
   <%= f.label :skill_level %>
   <%= f.select :skill_level, (1..10) %>
+
+  <%= f.submit %>
+
+  <% end %>
 
 
 <h2>Skills:</h2>
   <% @student.skills.each do |skill| %>
     <%= link_to skill.spell.name, edit_skill_path(skill) %>
   <% end %>
-<% end %>
+
 
 
 <p>list of spells</p>

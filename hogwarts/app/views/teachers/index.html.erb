@@ -1,2 +1,13 @@
-<h1>Teachers#index</h1>
-<p>Find me in app/views/teachers/index.html.erb</p>
+<h1>Current Living Staff</h1>
+
+<% @teachers.each do |teacher| %>
+  <div class="link"><%= link_to teacher.name, teacher %>
+  <div>
+  <%= link_to "Edit teacher", edit_teacher_path(teacher)%><%= link_to 'Fire this teacher', teacher, method: :delete, data: { confirm: "Are you sure you want to delete this teacher?"} %>
+  </div> 
+  <% end %>
+
+<br>
+
+<div class="link"><%= link_to "Hire a new teacher", new_teacher_path %></div>
+</div>

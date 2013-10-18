@@ -1,7 +1,7 @@
 <h1><%= @lecture.title %></h1>
-
+<% if @lecture.teacher%>
 <h2>Teacher: <%= link_to @lecture.teacher.name, @lecture.teacher %></h2>
-
+<% end %>
 <h2>Students: </h2>
 <% @lecture.students.each do |student| %>
   <div class="link"><%= link_to student.name, student %></div>

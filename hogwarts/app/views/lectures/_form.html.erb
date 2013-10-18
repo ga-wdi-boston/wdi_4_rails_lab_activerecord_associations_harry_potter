@@ -24,7 +24,7 @@
 
   <div class="field">
     <%= f.label :teacher %><br>
-    <%= collection_select(:lecture, :teacher_id, Teacher.all, :id, :title) %>
+    <%= collection_select(:lecture, :teacher_id, Teacher.all, :id, :name) %>
   </div>
 
 

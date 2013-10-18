@@ -42,12 +42,12 @@
 
   private
 
-  def set_Lecture
+  def set_lecture
     @lecture = Lecture.find(params[:id])
   end
 
-  def Lectures_params
-    params.require(:lecture).permit(:name, :teacher_id, :student_id)
+  def lectures_params
+    params.require(:lecture).permit(:name, :teacher_id, :student_id, :description)
   end
 
 

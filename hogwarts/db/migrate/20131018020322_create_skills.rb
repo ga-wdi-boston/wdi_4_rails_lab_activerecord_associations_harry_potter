@@ -5,6 +5,7 @@ class CreateSkills < ActiveRecord::Migration
       t.belongs_to :spell, index: true
       t.belongs_to :teacher, index: true
       t.integer :skill_level
+      t.timestamps
     end
   end
 end

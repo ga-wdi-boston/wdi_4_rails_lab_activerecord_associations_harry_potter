@@ -1,0 +1,12 @@
+<h1>Professors</h1>
+
+<% @professors.each do |professor| %>
+  <hr> Name: <%= link_to professor.first_name + " " + professor.last_name, professor %></br>
+  Image: <img src="<%= professor.image %>" width: 100px/></br>
+  <%= link_to 'Show', professor %>
+  <%= link_to 'Edit', edit_professor_path(professor) %>
+  <%= link_to 'Destroy', professor, method: :delete, data: { confirm: 'Are you sure?' } %>
+<% end %>
+<br>
+<hr>
+<%= link_to 'New Professor', new_professor_path %>

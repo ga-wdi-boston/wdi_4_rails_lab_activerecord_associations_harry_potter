@@ -1,4 +1,4 @@
 class Student < ActiveRecord::Base
-  has_many :lectures
-  has_many :professors, through: :lectures
+  has_many :registrations
+  has_many :lectures, through: :registrations
 end

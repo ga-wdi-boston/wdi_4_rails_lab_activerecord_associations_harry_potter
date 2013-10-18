@@ -1,2 +1,2 @@
-class Spells < ActiveRecord::Base
+class Spell < ActiveRecord::Base
 end

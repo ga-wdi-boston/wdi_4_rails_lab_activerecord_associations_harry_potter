@@ -1,5 +1,10 @@
 class SkillsController < ApplicationController
   
+  def index
+    @skill = Skill.where(student_id: params[:student_id])
+  end
+
+
   def edit
   	@skill = Skill.find(params[:id])
   end

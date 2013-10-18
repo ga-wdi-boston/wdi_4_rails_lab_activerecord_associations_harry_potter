@@ -7,12 +7,19 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 House.create(name: "Ravenclaw", colors: "blue, bronze")
-House.create(name: "Hufflepuff", colors: "yellow, black")
-House.create(name: "Slytherin", colors: "green, silver")
-House.create(name: "Griffindor", colors: "red, gold")
+4.times do |i|
+  house = House.create(name: Faker::Name.name)
+  5.times do |j|
+    student = Student.create(name: Faker::Name.name)
+    student.house = house
+    student.save!
+    %w(Accio Anapneo Avis Crucio).each do |spell|
+      spell1 = Spell.create(name: spell)
+      student.spells << spell1
+    end
+  end
+end
 
-Student.create(name: "Harry Potter", house_id: 4)
-Student.create(name: "Draco Malfoy", house_id: 3)
-Student.create(name: "Hermione Granger", house_id: 4)
-Student.create(name: "Luna Lovegood", house_id: 1)
-Student.create(name: "Robert Pattinson", house_id: 2)
+3.times do |i|
+  professor = Professor.create(name: Faker::Name.name)
+end

@@ -42,11 +42,11 @@ before_action :set_teacher, only: [:show, :edit, :update, :destroy]
   private 
 
   def set_teacher
-    @teacher = teacher.find(params[:id])
+    @teacher = Teacher.find(params[:id])
   end 
 
   def teacher_params
-    params.require(:teacher).permit(:name)
+    params.require(:teacher).permit(:name, :lecture_id)
   end 
 
 

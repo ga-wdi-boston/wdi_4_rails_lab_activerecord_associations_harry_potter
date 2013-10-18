@@ -3,14 +3,16 @@ Hogwarts::Application.routes.draw do
   resources :teachers do 
   	resources :skills
   	resources :lectures
+    resources :spells
   end
   
   resources :students do
   	resources :skills
   	resources :lectures
+    resources :spells
   end
 
-  resources :spells
+ 
 
   resources :houses, only: [:show, :index] do
     resources :students

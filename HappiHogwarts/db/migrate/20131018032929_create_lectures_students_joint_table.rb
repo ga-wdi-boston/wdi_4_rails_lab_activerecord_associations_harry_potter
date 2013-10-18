@@ -1,6 +1,6 @@
 class CreateLecturesStudentsJointTable < ActiveRecord::Migration
   def change
-    create_table :lectures_students_joint_tables, id: false do |t|
+    create_table :lectures_students, id: false do |t|
       t.integer :student_id
       t.integer :lecture_id
     end

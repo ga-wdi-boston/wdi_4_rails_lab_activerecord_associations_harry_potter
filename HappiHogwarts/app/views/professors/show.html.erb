@@ -4,8 +4,11 @@
 	<h3>Lectures given:</h3>
 	<ul>
 	<% @professor.lectures.each do |lecture| %>
-		<li><%= lecture.topic %></li>
-
+		<li><%= link_to lecture.topic, lecture %></li>
+	<% end %>
+		<ul>
+	<% @professor.students.each do |student| %>
+		<li><%= link_to student.name, student %></li>
 	<% end %>
 	</div>
 

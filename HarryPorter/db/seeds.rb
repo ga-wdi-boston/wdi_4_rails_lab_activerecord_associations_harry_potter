@@ -19,19 +19,19 @@
 # Student.create(name: "Luna Lovegood", house_id: 1) 
 # Student.create(name: "Robert Pattinson", house_id: 2)
 
-Lecture.create(name: "Potions" , description: "This is a Harry Porter magical lecture!")
-Lecture.create(name: "Defense of the Dark Arts" , description: "This is a Harry Porter magical lecture!")
-Lecture.create(name: "Lecture on Transformations" , description: "This is a Harry Porter magical lecture!")
+# Lecture.create(name: "Potions" , description: "This is a Harry Porter magical lecture!")
+# Lecture.create(name: "Defense of the Dark Arts" , description: "This is a Harry Porter magical lecture!")
+# Lecture.create(name: "Lecture on Transformations" , description: "This is a Harry Porter magical lecture!")
 
 
-Teacher.create(name: "Professor Quarrell")
-Teacher.create(name: "Severus Snape")
-Teacher.create(name: "Albus Dumbledore")
+# Teacher.create(name: "Professor Quarrell")
+# Teacher.create(name: "Severus Snape")
+# Teacher.create(name: "Albus Dumbledore")
 
-# Spell.create(name: "Luminario")
-# Spell.create(name: "Gargantuize")
-# Spell.create(name: "Rspeciramarious")
-# Spell.create(name: "Avada Kdavra")
+Spell.create(name: "Luminario")
+Spell.create(name: "Gargantuize")
+Spell.create(name: "Rspeciramarious")
+Spell.create(name: "Avada Kdavra")
 
 
 

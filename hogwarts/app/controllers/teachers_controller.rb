@@ -2,11 +2,7 @@ class TeachersController < ApplicationController
   before_action :set_teacher, only: [:show, :edit, :update, :destroy]
 
   def index
-    if params[:house_id]
-      @teachers = Teacher.where(house_id: params[:house_id])
-    else
       @teachers = Teacher.all
-    end
   end
 
   def show

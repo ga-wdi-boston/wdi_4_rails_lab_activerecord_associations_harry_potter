@@ -3,7 +3,7 @@
 <% @teachers.each do |teacher| %>
   <div class="link"><%= link_to teacher.name, teacher %>
   <div>
-  <%= link_to "Edit teacher", edit_teacher_path(teacher)%><%= link_to 'Fire this teacher', teacher, method: :delete, data: { confirm: "Are you sure you want to delete this teacher?"} %>
+  <%= link_to "Edit teacher", edit_teacher_path(teacher)%> <%= link_to 'Fire this teacher', teacher, method: :delete, data: { confirm: "Are you sure you want to delete this teacher?"} %>
   </div> 
   <% end %>
 

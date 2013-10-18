@@ -23,6 +23,11 @@
   <%= collection_select(:student, :house_id, House.all, :id, :name) %>
 </div>
 
+<div class="field">
+  <%= f.label :lectures %> <br>
+  <%= collection_check_boxes(:student, :lecture_ids, Lecture.all, :id, :name)%>
+</div>
+
 <div class="actions">
   <%= f.submit %>
 </div>

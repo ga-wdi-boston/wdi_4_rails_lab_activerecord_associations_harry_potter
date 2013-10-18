@@ -1,7 +1,14 @@
 <h1><%= @student.name %></h1>
 <div class="link">lives in <%= link_to @student.house.name, @student.house %></div>
 
-<p>list of classes</p>
+<% if @student.lectures %>
+  <h2>Lectures: </h2>
+  <% @student.lectures.each do |lecture| %>
+    <h3><%= lecture.name %></h3>
+  <% end %>
+<% end %>
+
+
 <p>list of spells</p>
 
 <div class="navigation-links">

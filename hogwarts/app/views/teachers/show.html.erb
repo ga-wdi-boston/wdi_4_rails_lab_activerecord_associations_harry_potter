@@ -1,2 +1,27 @@
-<h1>Teachers#show</h1>
-<p>Find me in app/views/teachers/show.html.erb</p>
+<h1>Teacher: <%= @teacher.name %></h1>
+
+<% if @teacher.description %>
+  <p><%= @teacher.description %></p>
+<% end %>
+
+<h2>Lectures: </h2>
+<% @teacher.lectures.each do |lecture| %>
+<h3><%= lecture.name %> </h3>
+
+<h4>Students:</h4>
+  <ul>
+    <% lecture.students.each do |student| %>
+      <li><%= link_to student.name, student %></li>
+    <% end %> 
+  </ul>
+
+<%end%> 
+
+<div class="navigation-links">
+
+<%= link_to "Edit", edit_teacher_path(@teacher) %>
+<%= link_to "Delete", @teacher, method: :delete, data: {confirm: "Are you sure?" } %>
+
+<%= link_to "Back", teachers_path %>
+
+</div>

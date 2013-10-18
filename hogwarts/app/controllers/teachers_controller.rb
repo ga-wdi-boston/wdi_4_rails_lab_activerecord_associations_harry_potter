@@ -44,7 +44,7 @@ class TeachersController < ApplicationController
   end
 
   def teacher_params
-    params.require(:teacher).permit(:name, :house_id)
+    params.require(:teacher).permit(:name)
   end
 
 end

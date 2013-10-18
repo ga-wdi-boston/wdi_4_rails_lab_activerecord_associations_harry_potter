@@ -43,7 +43,7 @@ ActiveRecord::Schema.define(version: 20131018002950) do
     t.integer "student_id"
     t.integer "professor_id"
     t.integer "spell_id"
-    t.integer "skill"
+    t.integer "level"
   end
 
   create_table "spells", force: true do |t|

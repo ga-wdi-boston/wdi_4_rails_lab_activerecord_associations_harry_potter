@@ -15,8 +15,9 @@
   <% @professor.professor_skills.each do |skill| %>
   <% @spellid = skill.spell_id %>
   <%= Spell.find(@spellid).name %>,
-  Level: <%= skill.level %></br>
+  Level: <%= link_to skill.level, edit_professor_skill_path(skill.id) %></br>
   <% end %>
+  <%= link_to 'New Professor Skill', new_professor_skill_path %>
 </p>
 
 <%= link_to 'Edit', edit_professor_path(@professor) %> |

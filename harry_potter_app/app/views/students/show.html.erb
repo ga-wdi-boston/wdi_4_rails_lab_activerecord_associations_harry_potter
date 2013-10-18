@@ -39,9 +39,9 @@
   <% @student.student_skills.each do |skill| %>
   <% @spellid = skill.spell_id %>
   <%= Spell.find(@spellid).name %>,
-  Level: <%= skill.level %></br>
+  Level: <%= link_to skill.level, edit_student_skill_path(skill.id) %></br>
   <% end %>
-</p>
+  <%= link_to 'New Student Skill', new_student_skill_path %></br>
 
 <%= link_to 'Edit', edit_student_path(@student) %> |
 <%= link_to 'Back', students_path %>

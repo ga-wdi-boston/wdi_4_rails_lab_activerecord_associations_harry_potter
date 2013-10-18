@@ -1,14 +1,5 @@
 class ProfessorSkillsController < ApplicationController
-  before_action :set_professor_skill, only: [:show, :edit, :update, :destroy]
-
-  # GET /professor_skills
-  def index
-    @professors_skills = ProfessorSkill.all
-  end
-
-  # GET /professor_skills/1
-  def show
-  end
+  before_action :set_professor_skill, only: [:edit, :update, :destroy]
 
   # GET /professor_skills/new
   def new
@@ -21,11 +12,11 @@ class ProfessorSkillsController < ApplicationController
 
   # POST /professor_skills
   def create
-    @professor_skill = ProfessorSkill.new(professorskill_params)
+    @professor_skill = ProfessorSkill.new(professor_skill_params)
 
     respond_to do |format|
       if @professor_skill.save
-        format.html { redirect_to @professor_skill, notice: 'A professor skill was successfully added.' }
+        format.html { redirect_to professor_path(@professor_skill.professor_id), notice: 'A professor skill was successfully added.' }
       else
         format.html { render action: 'new' }
       end
@@ -35,8 +26,8 @@ class ProfessorSkillsController < ApplicationController
   # PATCH/PUT /professor_skills/1
   def update
     respond_to do |format|
-      if @professor_skill.update(professor_params)
-        format.html { redirect_to @professor_skill, notice: 'The professor skill was successfully updated.' }
+      if @professor_skill.update(professor_skill_params)
+        format.html { redirect_to professor_path(@professor_skill.professor_id), notice: 'The professor skill was successfully updated.' }
       else
         format.html { render action: 'edit' }
       end

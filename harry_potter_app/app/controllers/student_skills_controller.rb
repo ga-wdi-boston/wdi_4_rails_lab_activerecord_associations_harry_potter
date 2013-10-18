@@ -1,14 +1,5 @@
 class StudentSkillsController < ApplicationController
-  before_action :set_student_skill, only: [:show, :edit, :update, :destroy]
-
-  # GET /student_skills
-  def index
-    @student_skills = StudentSkill.all
-  end
-
-  # GET /student_skills/1
-  def show
-  end
+  before_action :set_student_skill, only: [:edit, :update, :destroy]
 
   # GET /student_skills/new
   def new
@@ -21,11 +12,11 @@ class StudentSkillsController < ApplicationController
 
   # POST /student_skills
   def create
-    @student_skill = StudentSkill.new(studentskill_params)
+    @student_skill = StudentSkill.new(student_skill_params)
 
     respond_to do |format|
       if @student_skill.save
-        format.html { redirect_to @student_skill, notice: 'A student skill was successfully added.' }
+        format.html { redirect_to student_path(@student_skill.student_id), notice: 'A student skill was successfully added.' }
       else
         format.html { render action: 'new' }
       end
@@ -35,8 +26,8 @@ class StudentSkillsController < ApplicationController
   # PATCH/PUT /stduent_skills/1
   def update
     respond_to do |format|
-      if @student_skill.update(student_params)
-        format.html { redirect_to @student_skill, notice: 'The student skill was successfully updated.' }
+      if @student_skill.update(student_skill_params)
+        format.html { redirect_to student_path(@student_skill.student_id), notice: 'The student skill was successfully updated.' }
       else
         format.html { render action: 'edit' }
       end

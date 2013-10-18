@@ -26,6 +26,15 @@
 </p>
 
 <p>
+  <strong>Sections:</strong></br>
+  <% @student.sections.each do |section| %>
+  <%= link_to section.lecture.name, lecture_path(section.lecture.id) %>,
+  <%= link_to section.time, section_path(section.id) %></br>
+  <% end %>
+</p>
+
+
+<p>
   <strong>Spells:</strong></br>
   <% @student.student_skills.each do |skill| %>
   <% @spellid = skill.spell_id %>

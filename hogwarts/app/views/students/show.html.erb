@@ -10,6 +10,14 @@
   <% end %>
 <% end %>
 
+<% if @student.spells %>
+  <h2>Spells: </h2>
+  <% @student.spells.each do |spell| %>
+    <h3><%= spell.name %></h3>
+  <% end %>
+<% end %>
+
+
 
 
 

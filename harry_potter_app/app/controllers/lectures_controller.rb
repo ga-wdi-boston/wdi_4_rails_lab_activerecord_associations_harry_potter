@@ -21,7 +21,7 @@ class LecturesController < ApplicationController
 
   # POST /lectures
   def create
-    @lecture = Lecture.new(section_params)
+    @lecture = Lecture.new(lecture_params)
 
     respond_to do |format|
       if @lecture.save
@@ -35,7 +35,7 @@ class LecturesController < ApplicationController
   # PATCH/PUT /lectures/1
   def update
     respond_to do |format|
-      if @lecture.update(section_params)
+      if @lecture.update(lecture_params)
         format.html { redirect_to @lecture, notice: 'Lecture was successfully updated.' }
       else
         format.html { render action: 'edit' }
@@ -60,4 +60,5 @@ class LecturesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def lecture_params
       params.require(:lecture).permit(:name, :location)
+    end
 end

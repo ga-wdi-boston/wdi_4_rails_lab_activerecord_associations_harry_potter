@@ -9,6 +9,13 @@
     <%= f.label :house %>
     <%=collection_select(:student, :house_id, House.all, :id, :name, prompt: true)%>
   </div>
+
+   <div class="field">
+    <%= f.label :lecture %>
+    <%=collection_select(:student, :lecture_id, Lecture.all, :id, :topic, prompt: true)%>
+  </div>
+
+
   <div class="actions">
     <%= f.submit %>
   </div>

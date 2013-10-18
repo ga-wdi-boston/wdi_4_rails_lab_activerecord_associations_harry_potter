@@ -1,16 +1,21 @@
 <h1>Hogwarts Lecture</h1>
 <div class="lecture">
 	<h2><%= @lecture.topic %></h2>
+	<h3><%@lecture.weekday%></h3>
 	<div class='professors_lectures'>
 		<%= link_to @lecture.professor.name, @lecture.professor %>
 	</div>
 
 <div class="student-roster">
+<% if @lecture.students != nil %>
 	<ol>Student Roster:
 		<% @lecture.students.each do |student| %>
-		<li><%= link_to student.name, student_url %></li>
+		<li><%=student.name %></li>
 	</ol>
 		<% end %>
+		<%else%>
+		<%= "No students" %>
+		<%end%>
 </div>
 
 

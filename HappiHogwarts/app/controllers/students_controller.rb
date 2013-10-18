@@ -45,7 +45,7 @@ def set_student
 end
 
 def student_params
-  params.require(:student).permit(:name, :house_id)
+  params.require(:student).permit(:name, :house_id, :lecture_id, :professor_id)
 end
 
 end

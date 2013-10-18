@@ -4,7 +4,7 @@ Your goal, is to model Hogwarts. Hogwarts has several complex relationships that
 
 ## Data that needs represented
 
-Professors instruct the students at Hogwarts in the art of magic. They do this in Lectures. However, we can't fix all Students in every lecture, so some are held multiple times throughout the week. 
+Professors instruct the students at Hogwarts in the art of magic. They do this in Lectures. However, we can't fit all Students in every lecture, so some are held multiple times throughout the week, with a few students attending each. 
 
 Students and Professors both have learned many Spells, but have different amount of skill (expressed between 1-10) with each spell. Not all students have learned all of the spells, and are generally worse at the spells than the professors.
 

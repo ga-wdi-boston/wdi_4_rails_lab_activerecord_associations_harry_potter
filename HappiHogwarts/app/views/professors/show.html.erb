@@ -5,15 +5,9 @@
 	<ul>
 	<% @professor.lectures.each do |lecture| %>
 		<li><%= lecture.topic %></li>
-		<ol>Student Roster:
-		<% lecture.students.each do |student| %>
-		<li><%= link_to student.name, student_url %></li>
-		</ol>
-		<% end %>
 	</ul>
 	<% end %>
 	</div>
-
 
 
 	<%= link_to "back to professors", professors_url %>

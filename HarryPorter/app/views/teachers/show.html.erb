@@ -1,17 +1,21 @@
 <h1>Teacher: <%= @teacher.name %></h1>
 
-<h2>Lectures: </h2>
-<% @teacher.lectures.each do |lecture| %>
-<h3><%= lecture.name %> </h3>
+<% if @teacher.lectures %>
 
-<h4>Students:</h4>
-  <ul>
-    <% lecture.students.each do |student| %>
-      <li><%= link_to student.name, student %></li>
-    <% end %> 
-  </ul>
+  <h2>Lectures: </h2>
+  <% @teacher.lectures.each do |lecture| %>
+  <h3><%= lecture.name %> </h3>
+  
+  <h4>Students:</h4>
+    <ul>
+      <% lecture.students.each do |student| %>
+        <li><%= link_to student.name, student %></li>
+      <% end %> 
+    </ul>
 
 <%end%> 
+
+<% end %>
 
 <div class="navigation-links">
 

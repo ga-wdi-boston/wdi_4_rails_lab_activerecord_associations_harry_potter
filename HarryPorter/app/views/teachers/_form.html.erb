@@ -6,9 +6,9 @@
       prohibited this teacher from being saved:</h2>
 
       <ul>
-      <% @teacher.errors.full_messages.each do |msg| %>
-      <li><%= msg%></li>
-      <% end %>
+              <% @teacher.errors.full_messages.each do |msg| %>
+              <li><%= msg%></li>
+              <% end %>
       </ul>
     </div>
   <% end %>
@@ -16,6 +16,12 @@
 <div class="field">  
   <%= f.label :name %> <br>
   <%= f.text_field :name %>
+</div>
+
+
+<div class="field">
+  <%= f.label :lectures %> <br>
+  <%= collection_check_boxes(:teacher, :lecture_ids, Lecture.all, :id, :name)%>
 </div>
 
 <div class="actions">

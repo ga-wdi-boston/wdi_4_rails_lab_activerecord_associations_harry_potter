@@ -1,35 +1,18 @@
-<%= form_for(@teacher) do |f| %>
+<h1>Show All the Teachers</h1>
 
-  <% if @teacher.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@teacher.errors.count, "error") %>
-      prohibited this teacher from being saved:</h2>
+<% @teachers.each do |teacher| %>
+  <div class="link">
+     <h2><%= link_to teacher.name, teacher %></h2> 
+  <div>
 
-      <ul>
-      <% @teacher.errors.full_messages.each do |msg| %>
-      <li><%= msg%></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+     <div>
+     <%= link_to "Edit teacher", edit_teacher_path(teacher)%>
 
-<div class="field">  
-  <%= f.label :name %> <br>
-  <%= f.text_field :name %>
-</div>
-
-<div class="field">  
-  <%= f.label :description %> <br>
-  <%= f.text_area :description %>
-</div>
-
-<div class="field">
-  <%= f.label :lectures %> <br>
-  <%= collection_check_boxes(:teacher, :lecture_ids, Lecture.all, :id, :name)%>
-</div>
-
-<div class="actions">
-  <%= f.submit %>
-</div>
-
+     <%= link_to 'Fire this teacher', teacher, method: :delete,    data: { confirm: "Are you sure you want to delete this teacher?"} %></div>
+     </div> 
 <% end %>
+
+<br>
+
+<div class="link"><h2><%= link_to "Hire a new teacher", new_teacher_path %></h2></div>
+</div>

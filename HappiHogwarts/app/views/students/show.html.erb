@@ -3,6 +3,7 @@
 	<h2><%= @student.name %></h2>
 	<div class='house_students'>
 		<%= link_to @student.house.name, @student.house %>
+		<%= link_to @student.lectures.first.name, @student.lectures.first %>
 	</div>
 	<%= link_to "back to students", students_url %>
 </div>

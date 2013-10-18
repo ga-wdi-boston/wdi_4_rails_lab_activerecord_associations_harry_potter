@@ -1,4 +1,4 @@
 class Lecture < ActiveRecord::Base
-  belongs_to :students
+  has_and_belongs_to_many :students
   belongs_to :professor
 end

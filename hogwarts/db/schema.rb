@@ -25,10 +25,12 @@ ActiveRecord::Schema.define(version: 20131018003629) do
   end
 
   create_table "lectures", force: true do |t|
-    t.integer "teacher_id"
-    t.integer "student_id"
-    t.string  "name"
-    t.text    "description"
+    t.integer  "teacher_id"
+    t.integer  "student_id"
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "lectures", ["student_id"], name: "index_lectures_on_student_id", using: :btree

@@ -4,7 +4,7 @@ class StudentsController < ApplicationController
   def index
     if params[:house_id]
       @students = Student.where(:house_id, params[:house_id])
-    else 
+    else  
       @students = Student.all 
     end 
   end

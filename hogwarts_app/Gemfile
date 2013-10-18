@@ -1,5 +1,11 @@
 source 'https://rubygems.org'
 
+group :development do
+  gem 'faker'
+  gem 'chronic'
+end
+
+
 gem 'pry-rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

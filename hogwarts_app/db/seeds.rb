@@ -1,7 +1,13 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+%w(Gryffindor Hufflepuff Ravenclaw Slytherin).each do |h|
+  house = House.create(name: h)
+  5.times do
+    student = Student.create(name: Faker::Name.name)
+    student.save!
+    %w(Accio Anapneo Avis Crucio).each do |s|
+      spell = Spell.create(name: s)
+      student.spells << spell
+    end
+  end
+end
+
+3.times { Professor.create(name: Faker::Name.name) }

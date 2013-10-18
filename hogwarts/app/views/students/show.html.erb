@@ -10,8 +10,18 @@
   <% end %>
 <% end %>
 
-<% if @student.skills %>
-  <h2>Skills:</h2>
+
+
+  <%= form_for[@student, @student.skills.build]) do |f| %>
+  
+  <%= f.label :spell %>
+  <%= collection_select(:student, :spell_id, Spell.all, :id, :name) %>
+
+  <%= f.label :skill_level %>
+  <%= f.select :skill_level, (1..10) %>
+
+
+<h2>Skills:</h2>
   <% @student.skills.each do |skill| %>
     <%= link_to skill.spell.name, edit_skill_path(skill) %>
   <% end %>

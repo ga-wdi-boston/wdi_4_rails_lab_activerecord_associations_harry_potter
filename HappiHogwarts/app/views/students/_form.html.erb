@@ -12,7 +12,7 @@
 
   <div class="field">
     <%= f.label :lecture %>
-    <%=collection_select(:student, :lecture_id, Lecture.all, :id, :topic, prompt: true)%>
+    <%=collection_check_boxes(:student, :lecture_ids, Lecture.all, :id, :topic, prompt: true)%>
   </div>
 
 

@@ -45,7 +45,7 @@ def set_lecture
 end
 
 def lecture_params
-  params.require(:lecture).permit(:topic, :weekday, :professor_id, :student_id)
+  params.require(:lecture).permit(:topic, :weekday, :professor_id, :student_ids)
 end
 
 end

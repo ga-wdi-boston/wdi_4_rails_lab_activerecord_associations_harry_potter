@@ -1,10 +1,10 @@
-class CreateSkillsJoinTable < ActiveRecord::Migration
+class CreateSkills < ActiveRecord::Migration
   def change
   	create_table :skills do |t|
-  		t.integer :student_id
-  		t.integer :professor_id
-  		t.integer :spell_id
   		t.integer :level
+		t.belongs_to :skillable, polymorphic: true, index: true
+		t.belongs_to :spell
+		t.timestamps  		
   	end
   end
 end

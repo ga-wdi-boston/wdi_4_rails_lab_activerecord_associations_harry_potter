@@ -3,6 +3,7 @@ class CreateStudents < ActiveRecord::Migration
     create_table :students do |t|
       t.string :name
       t.integer :year, default: 1
+      t.belongs_to :house
       t.timestamps
     end
   end

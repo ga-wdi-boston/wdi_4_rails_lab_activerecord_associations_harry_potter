@@ -1,0 +1,20 @@
+<div class="student">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @student.first_name + " " + @student.last_name %>
+</p>
+
+<p>
+  <strong>Spells:</strong>
+  <% @student.spells.each do |spell| %>
+  <%= spell.name %>
+  <% end %>
+</p>
+
+</div>
+
+
+<%= link_to 'Edit', edit_student_path(@student) %> |
+<%= link_to 'Back', students_path %>

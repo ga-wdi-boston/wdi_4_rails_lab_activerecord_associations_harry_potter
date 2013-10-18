@@ -1,4 +1,4 @@
-class Skill < ActiveRecord::Base
+class StudentSkill < ActiveRecord
 	belongs_to :student
 	belongs_to :professor
 	belongs_to :spell

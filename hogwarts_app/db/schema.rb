@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131017214145) do
+ActiveRecord::Schema.define(version: 20131018005329) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,7 +34,17 @@ ActiveRecord::Schema.define(version: 20131017214145) do
   end
 
   create_table "sections", force: true do |t|
-    t.string "day"
+    t.string  "day"
+    t.integer "lecture_id"
+    t.integer "student_id"
+    t.integer "professor_id"
+  end
+
+  create_table "skills", force: true do |t|
+    t.integer "student_id"
+    t.integer "professor_id"
+    t.integer "spell_id"
+    t.integer "level",        default: 0
   end
 
   create_table "spells", force: true do |t|
@@ -53,7 +63,7 @@ ActiveRecord::Schema.define(version: 20131017214145) do
   add_index "spells_professors", ["professor_id"], name: "index_spells_professors_on_professor_id", using: :btree
   add_index "spells_professors", ["spell_id"], name: "index_spells_professors_on_spell_id", using: :btree
 
-  create_table "spells_students", id: false, force: true do |t|
+  create_table "spells_students", force: true do |t|
     t.integer "spell_id"
     t.integer "student_id"
     t.integer "student_skill"
@@ -67,6 +77,7 @@ ActiveRecord::Schema.define(version: 20131017214145) do
     t.integer  "year",       default: 1
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "house_id"
   end
 
 end

@@ -1,5 +1,7 @@
-<%= @spell.name %>
+<h1><%= @spell.name %></h1>
+
+<h2>Known to: </h2>
 
 <% @spell.students.each do |student| %>
-  <%= link_to student.name, student %>
+  <h2><%= link_to student.name, student %></h2>
 <% end %>

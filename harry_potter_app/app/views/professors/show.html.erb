@@ -10,6 +10,19 @@
   <%= @professor.image %>
 </p>
 
+<hr>
+
+<h3>Lectures</h3>
+<p>
+<% @professor.sections.each do |section| %>
+  <strong><%= section.lecture.name %></strong><br/>
+  Location: <%= section.lecture.location %><br/>
+  Time: <%= section.time %>
+  <% end %>
+</p>
+
+<hr>
+
 <p>
   <strong>Spells:</strong></br>
   <% @professor.professor_skills.each do |skill| %>

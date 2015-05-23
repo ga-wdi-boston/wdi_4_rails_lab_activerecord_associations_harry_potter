@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @student.first_name + " " + @student.last_name %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @student.grade %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @student.gender %>
+</p>
+
+<p>
+  <strong>House:</strong>
+  <%= @student.house.name %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @student.image %>
+</p>
+
+<p>
+  <strong>Sections:</strong></br>
+  <% @student.sections.each do |section| %>
+  <%= link_to section.lecture.name, lecture_path(section.lecture.id) %>,
+  <%= link_to section.time, section_path(section.id) %></br>
+  <% end %>
+</p>
+
+
+<p>
+  <strong>Spells:</strong></br>
+  <% @student.student_skills.each do |skill| %>
+  <% @spellid = skill.spell_id %>
+  <%= Spell.find(@spellid).name %>,
+  Level: <%= link_to skill.level, edit_student_skill_path(skill.id) %></br>
+  <% end %>
+  <%= link_to 'New Student Skill', new_student_skill_path %></br>
+
+<%= link_to 'Edit', edit_student_path(@student) %> |
+<%= link_to 'Back', students_path %>

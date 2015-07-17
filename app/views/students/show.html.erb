@@ -1,0 +1,20 @@
+<h1><%= @student.name %></h1><br />
+<%= @student.house %><br />
+<br />
+<strong>Lectures:</strong><br />
+<% @student.lectures.each do |lecture| %>
+	<%= lecture.name %> on <%= lecture.dayofweek %><br />
+<% end %>
+<br /><br />
+<strong>Spells:</strong><br />
+<% @student.spells.each do |spell| %>
+	<%= spell.name %><br />
+	Skill: <%= @student.skills %><br />
+<% end %>
+
+<strong>Spells:</strong><br />
+<% @student.skills.each do |skill| %>
+	<% spellid = skill.spell_id %>
+	<%= Spell.find(spellid).name %>, Level <%= skill.level %><br />
+<% end %>
+

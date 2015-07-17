@@ -1,0 +1,17 @@
+<h1><%= @lecture.title %></h1>
+<% if @lecture.teacher%>
+<h2>Teacher: <%= link_to @lecture.teacher.name, @lecture.teacher %></h2>
+<% end %>
+<h2>Students: </h2>
+<% @lecture.students.each do |student| %>
+  <div class="link"><%= link_to student.name, student %></div>
+<% end %>
+
+<div class="navigation-links">
+
+<%= link_to "Edit", edit_lecture_path(@lecture) %>
+
+<%= link_to "Delete", @lecture, method: :delete, data: {confirm: "Are you sure?" } %>
+
+<%= link_to "Back", lectures_path %>
+</div>

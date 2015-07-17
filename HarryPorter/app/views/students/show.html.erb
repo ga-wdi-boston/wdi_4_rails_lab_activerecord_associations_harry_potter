@@ -1,0 +1,23 @@
+<h1>Here are the student details</h1>
+<div> Name:<%= @student.name %></div>
+<div>House: <%= @student.house.name%></div>
+
+<% if @student.lectures %>
+
+  <h2>Lectures: </h2>
+  <% @student.lectures.each do |lecture| %>
+  <h3><%= lecture.name %> </h3>
+  <h3><%= lecture.teacher.name %></h3>
+
+<%end%> 
+
+<% end %>
+
+<div class="navigation-links">
+
+<%= link_to "Edit", edit_teacher_path(@teacher) %>
+<%= link_to "Delete", @teacher, method: :delete, data: {confirm: "Are you sure?" } %>
+
+<%= link_to "Back", teachers_path %>
+
+</div>

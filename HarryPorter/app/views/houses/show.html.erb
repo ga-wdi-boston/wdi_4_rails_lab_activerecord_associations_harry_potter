@@ -1,0 +1,8 @@
+<div>	<h1><%= @house.name %> </h1>
+		<%= @house.colors %> 
+		<%= @house.slogan %> 
+</div>
+
+<% @house.students.each do |student| %> 
+<div>	<%= link_to student.name, student %></div>
+<%end%> 

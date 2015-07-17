@@ -1,0 +1,11 @@
+<h1>All the Students in this House</h1>
+
+<div class="index">
+	<% @students.each do |student| %>
+
+	<h3><%= link_to student.name , student%></h3>
+	<%= link_to "Edit student", edit_student_path(student)%>
+	<%= link_to "New student", new_student_path %> 
+	<%= link_to 'destroy student', student, method: :delete, data: { confirm: "Are you sure you want to delete this student?"} %>
+	<%end%>
+</div>

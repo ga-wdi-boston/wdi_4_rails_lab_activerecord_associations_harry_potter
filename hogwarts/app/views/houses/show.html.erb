@@ -1,0 +1,17 @@
+<h1><%= @house.name %></h1>
+
+<div class="attribute">House colors: <%= @house.colors %></div>
+<div class="attribute">House motto: <%= @house.slogan %></div>
+
+<h2>Students</h2>
+<% @house.students.each do |student| %>
+  <div class="link"><%= link_to student.name, student %></div>
+<% end %>
+
+<div class="navigation-links">
+
+<%= link_to "Back", houses_path %>
+
+<%= link_to "Delete", @house, method: :delete, data: {confirm: "Are you sure?" } %></div>
+
+</div>

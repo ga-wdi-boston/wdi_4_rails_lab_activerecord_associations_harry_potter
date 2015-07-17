@@ -1,0 +1,5 @@
+<h1>List All the Houses!!!</h1>
+
+<% @houses.each do |house| %>
+  <div class="link"><%= link_to house.name, house %></div>
+<% end %>

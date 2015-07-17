@@ -1,0 +1,22 @@
+
+development:
+  host: localhost
+  adapter: postgresql
+  encoding: unicode
+  database: hogwarts_development
+  pool: 5
+
+
+test:
+  host: localhost
+  adapter: postgresql
+  encoding: unicode
+  database: hogwarts_test
+  pool: 5
+
+production:
+  host: localhost
+  adapter: postgresql
+  encoding: unicode
+  database: hogwarts_production
+  pool: 5

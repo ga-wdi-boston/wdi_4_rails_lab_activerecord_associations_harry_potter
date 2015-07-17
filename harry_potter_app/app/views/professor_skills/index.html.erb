@@ -1,0 +1,33 @@
+<div align="center"><h1>Hogwarts</h1></div>
+
+<h1>Houses</h1>
+<% @houses.each do |house| %>
+<hr>
+<h2><%= link_to house.name, house %></h2>
+
+<h4>Students</h4>
+<ul>
+  <% house.students.each do |student| %>
+  <li><%= link_to student.first_name + " " + student.last_name, student %></li>
+  <% end %>
+</ul>
+<% end %>
+
+<h1>Classes</h1>
+<% @lectures.each do |lecture| %>
+<hr>
+<h3><%= link_to lecture.name, lecture %></h3>
+Location: <%= lecture.location %><br/>
+<ul>
+  <% lecture.sections.each do |section| %>
+  <li>
+    <%= link_to section.time, section %>
+    <ul>
+      <li>
+        Professor: <%= link_to section.professor.first_name + " " + section.professor.last_name, section.professor %>
+      </li>
+    </ul>
+  </li>
+  <% end %>
+</ul>
+<% end %>

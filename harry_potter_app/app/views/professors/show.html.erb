@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @professor.first_name + " " + @professor.last_name %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @professor.image %>
+</p>
+
+<hr>
+
+<h3>Lectures</h3>
+<p>
+<% @professor.sections.each do |section| %>
+  <strong><%= section.lecture.name %></strong><br/>
+  Location: <%= section.lecture.location %><br/>
+  Time: <%= section.time %>
+  <% end %>
+</p>
+
+<hr>
+
+<p>
+  <strong>Spells:</strong></br>
+  <% @professor.professor_skills.each do |skill| %>
+  <% @spellid = skill.spell_id %>
+  <%= Spell.find(@spellid).name %>,
+  Level: <%= link_to skill.level, edit_professor_skill_path(skill.id) %></br>
+  <% end %>
+  <%= link_to 'Add Professor Skill', new_professor_skill_path %>
+</p>
+
+<%= link_to 'Edit', edit_professor_path(@professor) %> |
+<%= link_to 'Back', professors_path %>

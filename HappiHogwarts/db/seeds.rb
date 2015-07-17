@@ -1,0 +1,27 @@
+House.create(name: 'Gryffindor')
+House.create(name: 'Ravenclaw')
+House.create(name: 'Hufflepuff')
+House.create(name: 'Slytherin')
+
+Professor.create(name: 'McGonigal')
+Professor.create(name: 'Flitwick')
+Professor.create(name: 'Trelawney')
+
+Student.create(name: "Tom", house_id: 1,lecture_id: 1)
+Student.create(name: "Dave", house_id: 2,lecture_id: 2)
+Student.create(name: "Steve", house_id: 3,lecture_id: 3)
+Student.create(name: "George", house_id: 4,lecture_id: 4)
+Student.create(name: "Mary", house_id: 1,lecture_id: 5)
+Student.create(name: "Sue", house_id: 2,lecture_id: 6)
+Student.create(name: "Ellen", house_id: 3,lecture_id: 1)
+Student.create(name: "Julie", house_id: 4,lecture_id: 2)
+Student.create(name: "Rebecca", house_id: 1,lecture_id: 3)
+Student.create(name: "Cori", house_id: 2,lecture_id: 4)
+
+Lecture.create(topic: "Flying", professor_id: 1)
+Lecture.create(topic: "Running", professor_id: 2)
+Lecture.create(topic: "Sinking", professor_id: 3)
+Lecture.create(topic: "Swimming", professor_id: 1)
+Lecture.create(topic: "Walking", professor_id: 2)
+Lecture.create(topic: "Skipping", professor_id: 3)
+

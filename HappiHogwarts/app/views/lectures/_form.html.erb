@@ -1,0 +1,25 @@
+<%= form_for(@lecture) do |f| %>
+
+  <div class="field">
+    <%= f.label :topic %><br>
+    <%= f.text_field :topic %>
+  </div>
+
+  <div class="field">
+    <%= f.label :weekday %><br>
+    <%= f.text_field :weekday %>
+  </div>
+
+ <div class="field">
+    <%= f.label :professor %>
+    <%=collection_select(:lecture, :professor_id, Professor.all, :id, :name, prompt: true)%>
+  </div>
+
+   <div class="field">
+    <%= f.label :student %>
+    <%=collection_check_boxes(:lecture, :student_id, Student.all, :id, :name, prompt: true)%>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

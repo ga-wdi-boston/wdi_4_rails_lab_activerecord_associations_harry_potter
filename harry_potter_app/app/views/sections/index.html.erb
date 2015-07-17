@@ -1,0 +1,13 @@
+<h1>Sections</h1>
+
+<% @sections.each do |section| %>
+  <hr> Name: <%= link_to section.lecture.name, lecture_path(section.lecture.id) %></br>
+  Time: <%= link_to section.time, section %></br>
+  Location: <%= section.lecture.location %></br>
+  <%= link_to 'Show', section %>
+  <%= link_to 'Edit', edit_section_path(section) %>
+  <%= link_to 'Destroy', section, method: :delete, data: { confirm: 'Are you sure?' } %>
+<% end %>
+<br>
+<hr>
+<%= link_to 'New Section', new_section_path %>

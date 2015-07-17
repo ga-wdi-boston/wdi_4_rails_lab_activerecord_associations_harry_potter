@@ -1,0 +1,12 @@
+<h1>Lectures</h1>
+
+<% @lectures.each do |lecture| %>
+  <hr> Name: <%= link_to lecture.name, lecture %></br>
+  Location: <%= lecture.location %></br>
+  <%= link_to 'Show', lecture %>
+  <%= link_to 'Edit', edit_lecture_path(lecture) %>
+  <%= link_to 'Destroy', lecture, method: :delete, data: { confirm: 'Are you sure?' } %>
+<% end %>
+<br>
+<hr>
+<%= link_to 'New Lecture', new_lecture_path %>

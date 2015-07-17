@@ -1,0 +1,16 @@
+<h1>Hogwarts Student</h1>
+<div class="student">
+	<h2><%= @student.name %></h2>
+	<div class='house_students'>
+		<%= link_to @student.house.name, @student.house %>
+	</div>
+
+	<div class="spells"> 
+	 <h3>Spells</h3>
+	 	<% @student.spells.each do |spell| %>
+	 	<div class="spell"> <%= spell.incantation  %> </div>
+	 	<div class="credit"> <%= spell.skill_level %> </div>
+	 	<% end %>
+	 	</div>
+	<%= link_to "back to students", students_url %>
+</div>
